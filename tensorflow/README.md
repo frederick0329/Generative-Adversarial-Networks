@@ -2,7 +2,7 @@
 
 To run
 ```
-python train.py
+python train_gan.py
 ```
 
 Example images after 400 epochs
