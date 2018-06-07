@@ -8,7 +8,6 @@ class Discriminator(nn.Module):
         self.fc2 = nn.Linear(hidden_size, hidden_size)
         self.fc3 = nn.Linear(hidden_size, 1)
         self.lrelu = nn.LeakyReLU(0.2)
-        self.sigmoid = nn.Sigmoid()
 
     def forward(self, x):
         x = self.fc1(x)
@@ -16,7 +15,6 @@ class Discriminator(nn.Module):
         x = self.fc2(x)
         x = self.lrelu(x)
         x = self.fc3(x)
-        x = self.sigmoid(x)
         return x
 
 class Generator(nn.Module):
