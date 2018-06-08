@@ -17,9 +17,7 @@ def make_grid(batch_images, nrow=8):
         for x in range(xmaps):
             if k >= nmaps:
                 break
-            i = k // xmaps
-            j = k % ymaps
-            grid[:, i*height:(i+1)*height, j*width:(j+1)*width] = batch_images[k]
+            grid[:, y*height:(y+1)*height, x*width:(x+1)*width] = batch_images[k]
             k = k + 1
     return grid
 
